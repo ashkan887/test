@@ -3,7 +3,8 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt-get update && apt-get install -y unzip
+      - yum update -y # Use yum instead of apt-get
+      - yum install -y unzip
       - curl -O https://releases.hashicorp.com/terraform/1.4.6/terraform_1.4.6_linux_amd64.zip
       - unzip terraform_1.4.6_linux_amd64.zip
       - mv terraform /usr/local/bin/
